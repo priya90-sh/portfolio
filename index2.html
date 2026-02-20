@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priya Sharma | IT Engineer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== Animated Background ===== */
+.page{
+    min-height:100vh;
+    background:linear-gradient(270deg,#1e1e2f,#2c5364,#3a1c71,#4e4376);
+    background-size:600% 600%;
+    animation:bgMove 15s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 0;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Glow decorations */
+.bg-circle{
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(140px);
+    opacity:.25;
+}
+.one{background:#ff7ad9;top:-120px;left:-120px;}
+.two{background:#00ffd5;bottom:-120px;right:-120px;}
+
+/* ===== Main Card ===== */
+.container{
+    width:85%;
+    max-width:1000px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border-radius:22px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+/* Profile */
+.profile{text-align:center;}
+.profile img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid #ff7ad9;
+    box-shadow:0 0 25px #ff7ad9;
+    object-fit:cover;
+}
+
+.name{
+    text-align:center;
+    font-size:42px;
+    margin-top:15px;
+    background:linear-gradient(45deg,#ff7ad9,#00ffd5);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.tagline{
+    text-align:center;
+    margin-bottom:25px;
+    opacity:.85;
+}
+
+/* Sections */
+.section{
+    margin-top:28px;
+    padding:18px;
+    border-radius:12px;
+    transition:.3s;
+}
+.section:hover{
+    background:rgba(255,255,255,.07);
+    transform:translateX(6px);
+}
+
+h2{
+    border-left:4px solid #00ffd5;
+    padding-left:10px;
+    margin-bottom:10px;
+}
+
+p,li{line-height:1.7}
+
+/* Skills bars */
+.skill{margin:10px 0;}
+.bar{
+    height:10px;
+    background:#222;
+    border-radius:20px;
+    overflow:hidden;
+}
+.fill{
+    height:100%;
+    background:linear-gradient(90deg,#ff7ad9,#00ffd5);
+    animation:load 2s forwards;
+}
+@keyframes load{from{width:0}}
+
+/* Project cards */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+    padding:18px;
+    border-radius:14px;
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(255,122,217,.5);
+}
+
+/* Links */
+a{
+    color:#00ffd5;
+    text-decoration:none;
+    font-weight:600;
+}
+a:hover{text-shadow:0 0 10px #00ffd5;}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    opacity:.7;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+<div class="bg-circle one"></div>
+<div class="bg-circle two"></div>
+
+<div class="container">
+
+<div class="profile">
+<img src="profile.jpg" alt="Priya Sharma">
+</div>
+
+<div class="name">Priya Sharma</div>
+<p class="tagline">B.Tech IT Student | Software Developer | Creative Engineer 💻🌸</p>
+
+<!-- ABOUT -->
+<div class="section">
+<h2>Personal Details</h2>
+<p><strong>Date of Birth:</strong> May 31, 2004</p>
+<p><strong>Gender:</strong> Female</p>
+<p><strong>Location:</strong> Jaipur, India</p>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+<h2>Education</h2>
+<ul>
+<li><strong>B.Tech (Information Technology)</strong> — Banasthali Vidyapith (CGPA: 8.44)</li>
+<li>Class XII (CBSE, English Medium) — 78.4% (2022)</li>
+<li>Class X (CBSE, English Medium) — 85.3% (2020)</li>
+</ul>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+<h2>Technical Skills</h2>
+
+<div class="skill">C / C++
+<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+
+<div class="skill">Core Java & OOP
+<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+
+<div class="skill">SQL
+<div class="bar"><div class="fill" style="width:75%"></div></div></div>
+
+<div class="skill">Web Development (HTML & CSS)
+<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<strong>MoodMusicGUI (Java Swing)</strong>
+<p>GUI application recommending songs based on mood with direct YouTube links.</p>
+</div>
+
+<div class="card">
+<strong>Electronics Formula Library (C++)</strong>
+<p>Menu-based reference system for BJT, amplifiers and transistor formulas.</p>
+</div>
+
+<div class="card">
+<strong>Linked List Library (C++)</strong>
+<p>Custom library implementing singly & doubly linked list operations.</p>
+</div>
+
+<div class="card">
+<strong>Virtual Wardrobe (C++)</strong>
+<p>OOP based console application suggesting clothing combinations using file handling.</p>
+</div>
+
+</div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section">
+<h2>Certifications & Achievements</h2>
+<ul>
+<li>OpenAI Workshop Certificate</li>
+<li>Azure Cloud with Artificial Intelligence Workshop</li>
+<li>Python Certificate — SoloLearn</li>
+<li>JCI Certificate of Merit</li>
+<li>Jalsa Inter School Dance Competition Certificate</li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+<h2>Get In Touch</h2>
+<p><strong>Mobile:</strong> +91-9896024369</p>
+<p><strong>Email:</strong> <a href="mailto:priyasharmatennis@gmail.com">priyasharmatennis@gmail.com</a></p>
+</div>
+
+<div class="footer">
+© 2026 Priya Sharma | Engineer Portfolio
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
